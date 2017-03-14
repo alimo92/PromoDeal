@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.promodeal.matekap.promodeal.Activities.PostDetailActivity"
+    android:orientation="vertical"
+    android:background="@color/White">
+
+    <!--Header-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_conversation"
+        android:paddingTop="30dp"
+        android:background="@color/White">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/coupoff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:id="@+id/detailpost_userimage_show"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/White" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/detailpost_user_show"
+                        android:text="user name"
+                        android:textColor="@color/OrangeRed"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="date created"
+                    android:gravity="end"
+                    android:id="@+id/detailpost_datecreated_show"
+                    android:paddingTop="20dp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:id="@+id/detailpost_image_show"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:id="@+id/detailpost_title_show"
+                android:paddingLeft="10dp"
+                android:textColor="@color/CornflowerBlue"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="description"
+                android:id="@+id/detailpost_description_show"
+                android:textColor="@color/Black"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailpost_averagerating_show"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailpost_ratingbar_show"
+                android:numStars="5"
+                style="?android:attr/ratingBarStyleSmall"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="10">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailpost_writecomment_show"
+                    android:hint="write a comment ..."
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:id="@+id/detailpost_sendcomment_show"
+                    android:text="Send"
+                    android:background="@drawable/mybutton"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
